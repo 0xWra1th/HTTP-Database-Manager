@@ -120,7 +120,9 @@ public class Server{
         // ------------ READ THROUGH HEADERS AND DETERMINE ACTIONS ------------
         try{
             String line = in.readLine();
+            System.out.println("---------------------------------------");
             while(line != null && line.length() > 0){
+                System.out.println(line);
                 String method = line.split(" ")[0];
                 String url = line.split(" ")[1];
                 String action = url.split("[?]")[0];
@@ -233,6 +235,7 @@ public class Server{
                     break;
                 }
             }
+            System.out.println("---------------------------------------");
         }catch(Exception e){
             e.printStackTrace();
         }
